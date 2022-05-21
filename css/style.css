@@ -1,0 +1,496 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    width: auto;
+    margin: 0 auto;
+}
+
+
+.container-one{
+margin: 0 auto;
+position: relative;
+}
+
+.header{
+padding-top: 50px;
+margin: 0 auto;
+display: flex;
+justify-content: space-around;
+}
+
+.menu{
+text-align: center;
+font-family: 'Roboto', sans-serif;
+position: relative;
+display: flex;
+justify-content: flex-end;
+}
+
+.menu h1{
+font-size: 28px;
+}
+.menu button{
+width: 200px;
+margin-left: 40px;
+font-weight: bold;
+font-size: 24px;
+border-radius: 5px;
+border: none;
+height: 72px;
+background-color: rgba(255, 238, 0, 0.774);
+}
+.menu button:hover{
+background: none;
+border: 3px solid rgba(255, 238, 0, 0.774);
+}
+
+.container-two{
+
+position: relative;
+margin: 0 auto;
+}
+
+
+.txt{
+top: 50px;
+font-size: 30px;
+font-family: 'Roboto', sans-serif;
+position: relative;
+text-align: center;
+margin: 0 auto;
+}
+
+.container-two h2{
+font-weight: bold;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+font-size: 45px;
+}
+
+.plus{
+display: flex;
+justify-content: space-around;
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+
+.plus h3{
+ font-size: 20px;
+
+}
+
+
+.container-three{
+top: 60px;
+position: relative;
+text-align: center;
+}
+
+.filterDiv {
+   
+    border-bottom: 1px solid gray;
+    text-align: center;
+    color: #000;
+    font-weight: bolder;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none; 
+}
+
+
+.show {
+    display: block;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.container {
+    padding-top: 50px;
+    overflow: hidden;
+}
+
+.plus p{
+line-height: 2em;
+max-width: 351px;
+}
+
+.plus span{
+font-size: 30px;
+
+}
+
+.container-four{
+top: 100px;
+position: relative;
+margin: 0 auto;
+}
+
+#slider { 
+    position: relative;
+	text-align: center;
+    top: 10px;
+}
+
+#slider{ 
+	margin: 0 auto;
+}
+
+#slides article{ 
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ 
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ 
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ 
+	width: 100%;
+}
+
+#desktop:checked ~ #slider{ 
+    font-family: 'Roboto', sans-serif;
+	max-width: 300px; 
+}
+
+
+#switch1:checked ~ #controls label:nth-child(5), 
+#switch2:checked ~ #controls label:nth-child(1),
+#switch3:checked ~ #controls label:nth-child(2),
+#switch4:checked ~ #controls label:nth-child(3),
+#switch5:checked ~ #controls label:nth-child(4){
+	background: url('prev.png') no-repeat; 
+	float: left;
+	margin: 0 0 0 -84px; 
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+
+#switch1:checked ~ #controls label:nth-child(2), 
+#switch2:checked ~ #controls label:nth-child(3),
+#switch3:checked ~ #controls label:nth-child(4),
+#switch4:checked ~ #controls label:nth-child(5),
+#switch5:checked ~ #controls label:nth-child(1){
+	background: url('next.png') no-repeat; 
+	float: right;
+	margin: 0 -84px 0 0;
+	display: block;
+	height: 68px;
+	width: 68px;
+}
+
+label, a{
+	cursor: pointer;
+}
+
+.all input{ 
+	display: none;
+}
+
+
+#switch1:checked ~ #slides .image{
+	margin-left: 0;
+}
+
+#switch2:checked ~ #slides .image{
+	margin-left: -100%;
+}
+
+#switch3:checked ~ #slides .image{
+	margin-left: -200%;
+}
+
+#switch4:checked ~ #slides .image{
+	margin-left: -300%;
+}
+
+#switch5:checked ~ #slides .image{
+	margin-left: -400%;
+}
+
+#controls{ 
+	margin: -25% 0 0 0;
+	width: 100%;
+	height: 50px;
+}
+
+#active label{ 
+	border-radius: 10px; 
+	display: inline-block; 
+	width: 15px;
+	height: 15px;
+	background: #bbb;
+}
+
+#active{ 
+	margin: 23% 0 0;
+	text-align: center;
+}
+
+#active label:hover{ 
+	background: #76c8ff;
+	border-color: #777 !important; 
+}
+
+
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4),
+#switch5:checked ~ #active label:nth-child(5){
+	background: #18a3dd;
+	border-color: #18a3dd !important;
+}
+
+#slides .image{ 
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#controls label:hover{ 
+	opacity: 0.6;
+}
+
+#controls label{ 
+	transition: opacity 0.2s ease-out;
+}
+
+
+.sotrud p{
+font-size: 20px;
+color: #000;
+}
+
+
+.sotrud{
+display: flex;
+justify-content: space-around;
+text-align: center;
+color: #fff;
+font-family: 'Roboto', sans-serif;
+width: 1000px;
+margin: 0 auto;
+}
+
+.sotrud img{
+width: 225px;
+height: 225px;
+border-radius: 10px;
+}
+
+.container-four h1{
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+
+.container-five h3{
+text-align: center;
+font-family: 'Roboto', sans-serif;
+font-size: 40px;
+}
+
+.container-five{
+top: 150px;
+position: relative;
+margin: 0 auto;
+}
+
+.brends{
+color: #fff;
+background-color: gray;
+margin: 0 auto;
+width: 1300px;
+display: flex;
+justify-content: space-around;
+}
+.container-six{
+margin-top: 300px;
+position: relative;
+
+}
+
+.sovet1{
+ border-radius: 10px;
+height: 450px;
+width:450px;
+background-image: url(../img/1foto\ \(2\).jpg);
+}
+
+.sovet2{
+    border-radius: 10px;
+    height: 450px;
+    width:450px;
+    background-image: url(../img/2foto\ \(1\).jpg);
+}
+
+.sovet3{
+    border-radius: 10px;
+    height: 450px;
+    width: 450px;
+    background-image: url(../img/3foto.jpg);
+}
+
+.sovet4{
+    border-radius: 10px;
+    height: 450px;
+    width: 450px;
+    background-image: url(../img/4foto.jpg);
+}
+
+.text{
+height: 144px;
+background-color: gray;
+text-align: center;
+margin-top: 310px;
+font-family: 'Roboto', sans-serif;
+font-size: 40px;
+}
+
+.polez{
+margin: 0 auto;
+display: flex;
+justify-content: space-around;
+}
+
+.container-six h3{
+text-align: center;
+font-family: 'Roboto', sans-serif;
+font-size: 40px;
+}
+
+.sovet1:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+}
+.sovet2:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+}
+.sovet3:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+}
+.sovet4:hover{
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .7);
+}
+
+.container-seven{
+padding-top: 40px;
+padding-bottom: 40px;
+background-color: rgba(255, 238, 0, 0.774);
+position: relative;
+margin: 0 auto;
+top: 150px;
+}
+
+
+#fol{
+border: 3px solid #000;
+border-radius: 10px;
+font-size: 20px;
+background: none;
+width: 150px;
+height: 70px;
+margin-top: 20px;
+}
+
+
+#fol:hover{
+background: #fff;
+border: none;
+}
+.container-seven h1{
+text-align: center;
+font-family: 'Roboto', sans-serif;
+font-size: 40px;
+}
+
+.form{
+text-align: center;
+margin: 0 auto;
+display: flex;
+flex-direction: column;
+}
+
+#name{
+border: none;
+border-radius: 10px;
+font-size: 20px;
+width: 300px;
+height: 50px;
+}
+
+.footer{
+margin: 0 auto;
+top: 150px;
+position: relative;
+}
+
+.soz{
+color: rgb(92, 91, 91);
+font-family: 'Roboto', sans-serif;
+font-size: 20px;
+margin: 0 auto;
+display: flex;
+justify-content: space-around;
+width: 300px;
+}
+.soz i{
+color: rgb(92, 91, 91);
+text-decoration: none;
+}
+
+.footer h5{
+text-align: center;
+font-size: 20px;
+color: rgb(92, 91, 91);
+text-decoration: none;
+font-family: 'Roboto', sans-serif;  
+}
+.soz i:hover{
+color: #000;
+}
+
+.topbutton {
+    text-decoration: none;
+    width:130px;
+    border:2px solid #ccc;
+    background:#f7f7f7;
+    text-align:center;
+    padding:10px;
+    position:fixed;
+    bottom:50px;
+    right:50px;
+    cursor:pointer;
+    color:#333;
+    font-family: 'Roboto', sans-serif;  
+    font-size:20px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    }
